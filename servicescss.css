@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #202020;
+  --secondary-color: #f1f954;
+  --secondary-color-dark: #d79447;
+  --text-light: #d1d5db;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo img {
+  max-width: 120px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.link a {
+  position: relative;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.link a:hover {
+  color: var(--secondary-color);
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.link a:hover::after {
+  width: 100%;
+}
+
+.gallery {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.gallery__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery__media img,
+.gallery__media video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gallery__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery__info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.gallery__info p {
+  color: var(--text-light);
+}
+
+footer {
+  background-color: #202020;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer__content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.social__links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.social__links li {
+  display: inline-block;
+}
+
+.social__links a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social__links a:hover {
+  color: #f1f954;
+  transform: scale(1.2);
+}
+
